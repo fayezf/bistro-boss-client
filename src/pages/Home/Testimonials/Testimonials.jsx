@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
+import quote from '../../../assets/icon/quote.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 
@@ -35,6 +36,7 @@ const Testimonials = () => {
                                 value={review.rating}
                                 readOnly
                             />
+                            <img src={quote} alt="" />
                             <p className='py-8'>{review.details}</p>
                             <h3 className="2xl text-orange-400">{review.name}</h3>
                         </div>
