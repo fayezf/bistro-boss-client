@@ -91,7 +91,7 @@ const SignUp = () => {
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
-                        <p><small>Already have an account <Link to="/login">Login</Link></small></p>
+                        <p className='text-center'><small>Already have an account <Link to="/login">Login</Link></small></p>
                         <SocialLogin></SocialLogin>
                     </div>
                 </div>

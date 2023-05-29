@@ -15,10 +15,10 @@ const SocialLogin = () => {
     return (
         <div>
             <div className="divider">OR</div>
-            <div className='flex items-center ml-20 mb-2 gap-2'>
-                <p onClick={handleGoogle} className="btn btn-circle btn-outline"><FaGoogle></FaGoogle></p>
-                <div className='border border-gray-600 p-2 rounded'>
-                    <span className='text-primary'>Google sign in</span>
+            <div className='flex justify-center items-center border border-gray-600rounded p-1 mb-2 gap-2'>
+                <p onClick={handleGoogle} className="btn btn-circle btn-outline text-cyan-700"><FaGoogle></FaGoogle></p>
+                <div>
+                    <span className='text-green-900 font-bold'>Google</span>
                 </div>
             </div>
         </div>
