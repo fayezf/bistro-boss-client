@@ -20,7 +20,7 @@ const SignUp = () => {
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
                         const saveUser = {name: data.name, email: data.email}
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://bistro-boss-server-fayezf.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -64,21 +64,21 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" {...register("name", { required: true })} name='name' placeholder="Your Name" className="input input-bordered" />
+                                <input type="text" {...register("name", { required: true })} name='name' placeholder="Your Name" className="input input-bordered w-full" />
                                 {errors.name && <span className='text-red-600'>Name is required</span>}
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text" {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered" />
+                                <input type="text" {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered w-full" />
                                 {errors.photoURL && <span className='text-red-600'>Photo URL is required</span>}
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" {...register("email", { required: true })} name='email' placeholder="Your Email" className="input input-bordered" />
+                                <input type="email" {...register("email", { required: true })} name='email' placeholder="Your Email" className="input input-bordered w-full" />
                                 {errors.email && <span className='text-red-600'>Email is required</span>}
                             </div>
                             <div className="form-control">
@@ -90,7 +90,7 @@ const SignUp = () => {
                                     minLength: 6,
                                     maxLength: 20,
                                     pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/
-                                })} name='password' placeholder="password" className="input input-bordered" />
+                                })} name='password' placeholder="password" className="input input-bordered w-full" />
                                 {errors.password?.type === 'required' && <p className='text-red-600'>Password is required</p>}
                                 {errors.password?.type === 'minLength' && <p className='text-red-600'>Password must be 6 characters</p>}
                                 {errors.password?.type === 'maxLength' && <p className='text-red-600'>Password must be less than 20 characters</p>}
@@ -100,7 +100,7 @@ const SignUp = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Sign Up" />
+                                <input className="btn btn-primary w-full" type="submit" value="Sign Up" />
                             </div>
                         </form>
                         <p className='text-center'><small>Already have an account <Link to="/login">Login</Link></small></p>
